@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(41, 61%, 97%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(41, 20%, 90%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(87, 35%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(41, 20%, 90%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(41, 20%, 90%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(87, 35%, 49%);
+  --radius: 0.5rem;
+  
+  /* Custom sage colors */
+  --sage-50: hsl(87, 23%, 96%);
+  --sage-100: hsl(87, 23%, 91%);
+  --sage-200: hsl(87, 25%, 82%);
+  --sage-300: hsl(87, 25%, 72%);
+  --sage-400: hsl(87, 25%, 60%);
+  --sage-500: hsl(87, 35%, 49%);
+  --sage-600: hsl(87, 35%, 44%);
+  --sage-700: hsl(87, 35%, 37%);
+  --sage-800: hsl(87, 35%, 31%);
+  --sage-900: hsl(87, 35%, 25%);
+  
+  /* Custom terracotta colors */
+  --terracotta-50: hsl(20, 61%, 96%);
+  --terracotta-100: hsl(20, 61%, 89%);
+  --terracotta-200: hsl(20, 61%, 79%);
+  --terracotta-300: hsl(20, 61%, 67%);
+  --terracotta-400: hsl(20, 61%, 55%);
+  --terracotta-500: hsl(20, 61%, 43%);
+  --terracotta-600: hsl(20, 61%, 38%);
+  --terracotta-700: hsl(20, 61%, 32%);
+  --terracotta-800: hsl(20, 61%, 26%);
+  --terracotta-900: hsl(20, 61%, 21%);
+  
+  /* Custom cream and beige */
+  --cream: hsl(41, 61%, 97%);
+  --beige: hsl(41, 35%, 94%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(87, 35%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  
+  .bg-beige {
+    background-color: var(--beige);
+  }
+  
+  .bg-sage-50 { background-color: var(--sage-50); }
+  .bg-sage-100 { background-color: var(--sage-100); }
+  .bg-sage-200 { background-color: var(--sage-200); }
+  .bg-sage-300 { background-color: var(--sage-300); }
+  .bg-sage-400 { background-color: var(--sage-400); }
+  .bg-sage-500 { background-color: var(--sage-500); }
+  .bg-sage-600 { background-color: var(--sage-600); }
+  .bg-sage-700 { background-color: var(--sage-700); }
+  .bg-sage-800 { background-color: var(--sage-800); }
+  .bg-sage-900 { background-color: var(--sage-900); }
+  
+  .text-sage-50 { color: var(--sage-50); }
+  .text-sage-100 { color: var(--sage-100); }
+  .text-sage-200 { color: var(--sage-200); }
+  .text-sage-300 { color: var(--sage-300); }
+  .text-sage-400 { color: var(--sage-400); }
+  .text-sage-500 { color: var(--sage-500); }
+  .text-sage-600 { color: var(--sage-600); }
+  .text-sage-700 { color: var(--sage-700); }
+  .text-sage-800 { color: var(--sage-800); }
+  .text-sage-900 { color: var(--sage-900); }
+  
+  .border-sage-100 { border-color: var(--sage-100); }
+  .border-sage-500 { border-color: var(--sage-500); }
+  
+  .bg-terracotta-50 { background-color: var(--terracotta-50); }
+  .bg-terracotta-100 { background-color: var(--terracotta-100); }
+  .bg-terracotta-200 { background-color: var(--terracotta-200); }
+  .bg-terracotta-300 { background-color: var(--terracotta-300); }
+  .bg-terracotta-400 { background-color: var(--terracotta-400); }
+  .bg-terracotta-500 { background-color: var(--terracotta-500); }
+  .bg-terracotta-600 { background-color: var(--terracotta-600); }
+  .bg-terracotta-700 { background-color: var(--terracotta-700); }
+  .bg-terracotta-800 { background-color: var(--terracotta-800); }
+  .bg-terracotta-900 { background-color: var(--terracotta-900); }
+  
+  .text-terracotta-50 { color: var(--terracotta-50); }
+  .text-terracotta-100 { color: var(--terracotta-100); }
+  .text-terracotta-200 { color: var(--terracotta-200); }
+  .text-terracotta-300 { color: var(--terracotta-300); }
+  .text-terracotta-400 { color: var(--terracotta-400); }
+  .text-terracotta-500 { color: var(--terracotta-500); }
+  .text-terracotta-600 { color: var(--terracotta-600); }
+  .text-terracotta-700 { color: var(--terracotta-700); }
+  .text-terracotta-800 { color: var(--terracotta-800); }
+  .text-terracotta-900 { color: var(--terracotta-900); }
+}
